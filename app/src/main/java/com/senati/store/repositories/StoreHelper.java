@@ -29,7 +29,7 @@ public class StoreHelper extends SQLiteOpenHelper {
                         "LICENCIA TEXT NOT NULL," +
                         "VERSION INT NOT NULL," +
                         "ESPACIO_MB INT NOT NULL," +
-                        "PRECIO REAL NOT NULL" +
+                        "PRECIO REAL" +
                         ")";
         sqLiteDatabase.execSQL(createTableQuery);
     }
