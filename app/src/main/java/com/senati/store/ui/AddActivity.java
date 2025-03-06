@@ -38,15 +38,14 @@ public class AddActivity extends AppCompatActivity {
     public void addItem(View view){
         if(!validateFields()) return;
 
-        storeHelper.addData(new StoreModel(
-                -1,
+        storeHelper.addData(
                 spinner_desarrollador.getSelectedItem().toString(),
                 et_nombre.getText().toString(),
                 spinner_licencia.getSelectedItem().toString(),
                 Integer.parseInt(et_version.getText().toString()),
                 Integer.parseInt(et_espaciomb.getText().toString()),
-                Integer.parseInt(et_precio.getText().toString())
-        ));
+                Double.parseDouble(et_precio.getText().toString())
+        );
 
         showToastShort(this, "Agregado exitosamente");
         clearFields();
@@ -85,8 +84,6 @@ public class AddActivity extends AppCompatActivity {
     }
 
     private boolean validateFields() {
-        //spiner_desarrollador
-        //spinner_licencia
         if (isEmpty(et_nombre)) return false;
         if (isEmpty(et_version)) return false;
         if (isEmpty(et_espaciomb)) return false;

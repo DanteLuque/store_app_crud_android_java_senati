@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.senati.store"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.senati.store"
-        minSdk = 31
-        targetSdk = 34
+        minSdk = 29
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

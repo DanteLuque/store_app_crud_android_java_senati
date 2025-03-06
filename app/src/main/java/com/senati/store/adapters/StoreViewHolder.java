@@ -29,8 +29,8 @@ public class StoreViewHolder extends RecyclerView.ViewHolder {
     public void bind(StoreModel storeModel) {
         tv_nombre.setText(storeModel.getNombre());
         tv_desarrollador.setText(storeModel.getDesarrollador());
-        tv_version.setText(storeModel.getVersion());
-        tv_espacioMB.setText(storeModel.getEspacioMb());
+        tv_version.setText(String.valueOf(storeModel.getVersion()));
+        tv_espacioMB.setText(String.valueOf(storeModel.getEspacioMb()));
         tv_licencia.setText(storeModel.getLicencia());
         tv_precio.setText(String.valueOf(storeModel.getPrecio()));
     }

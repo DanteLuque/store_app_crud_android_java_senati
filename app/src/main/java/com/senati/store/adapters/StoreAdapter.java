@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.senati.store.models.StoreModel;
 import com.senati.store.repositories.StoreHelper;
 import com.senati.store.ui.MainActivity;
+import com.senati.store.ui.UpdateActivity;
 
 import java.util.ArrayList;
 
@@ -55,7 +56,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreViewHolder> {
             intent.putExtra("ESPACIO_MB",storeModel.getEspacioMb());
             intent.putExtra("PRECIO",storeModel.getPrecio());
 
-            intent.putExtra("id", storeModel.getId());
+            intent.putExtra("ID", storeModel.getId());
             context.startActivity(intent);
         });
     }
