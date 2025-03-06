@@ -1,5 +1,7 @@
 package com.senati.store.ui;
 
+import static com.senati.store.constants.Constants.DESARROLLADORES;
+import static com.senati.store.constants.Constants.LICENCIAS;
 import static com.senati.store.utils.FieldsUtils.isEmpty;
 import static com.senati.store.utils.ToastUtils.showToastShort;
 
@@ -61,14 +63,8 @@ public class AddActivity extends AppCompatActivity {
         et_precio = findViewById(R.id.et_precio);
 
 
-        List<String> desarrolladores = Arrays.asList("Desarrollador",
-                "Microsoft", "Apple", "Intel");
-
-        List<String> licencias = Arrays.asList("Licencia",
-                "Comercial", "GNU");
-
-        CustomSpinnerAdapter desarrolladorAdapter = new CustomSpinnerAdapter(this, desarrolladores);
-        CustomSpinnerAdapter licenciaAdapter = new CustomSpinnerAdapter(this, licencias);
+        CustomSpinnerAdapter desarrolladorAdapter = new CustomSpinnerAdapter(this, DESARROLLADORES);
+        CustomSpinnerAdapter licenciaAdapter = new CustomSpinnerAdapter(this, LICENCIAS);
 
         spinner_desarrollador.setAdapter(desarrolladorAdapter);
         spinner_licencia.setAdapter(licenciaAdapter);
@@ -90,12 +86,12 @@ public class AddActivity extends AppCompatActivity {
         if (isEmpty(et_precio)) return false;
 
         if (spinner_desarrollador.getSelectedItemPosition() == 0) {
-            showToastShort(this, "seleccione un desarrollador.");
+            showToastShort(this, "seleccione un desarrollador");
             return false;
         }
 
         if (spinner_licencia.getSelectedItemPosition() == 0) {
-            showToastShort(this, "seleccione una licencia.");
+            showToastShort(this, "seleccione una licencia");
             return false;
         }
 

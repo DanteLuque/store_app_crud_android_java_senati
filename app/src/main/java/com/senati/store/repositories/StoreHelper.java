@@ -71,20 +71,28 @@ public class StoreHelper extends SQLiteOpenHelper {
         database.delete(TABLE_NAME,"ID=?",new String[]{id});
     }
 
-    public void updateData(StoreModel storeModel){
+    public void updateData(
+            String desarrollador,
+            String nombre,
+            String licencia,
+            int version,
+            int espacioMb,
+            double precio,
+            String id
+    ){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put("DESARROLLADOR",storeModel.getDesarrollador());
-        values.put("NOMBRE",storeModel.getNombre());
-        values.put("LICENCIA",storeModel.getLicencia());
-        values.put("VERSION",storeModel.getVersion());
-        values.put("ESPACIO_MB",storeModel.getEspacioMb());
-        values.put("PRECIO",storeModel.getPrecio());
+        values.put("DESARROLLADOR",desarrollador);
+        values.put("NOMBRE",nombre);
+        values.put("LICENCIA",licencia);
+        values.put("VERSION",version);
+        values.put("ESPACIO_MB",espacioMb);
+        values.put("PRECIO",precio);
 
         sqLiteDatabase.update(
                 TABLE_NAME,values,"ID=?",
-                new String[]{String.valueOf(storeModel.getId())}
+                new String[]{id}
         );
     }
 

@@ -1,10 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.UpdateActivity">
+    tools:context=".ui.AddActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:text="Actualizar Item"
+        android:textColor="@color/deep_blue"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/update_spinner_desarrollador"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="10dp"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/deep_blue"
+        android:textColorHint="@color/deep_blue"
+        android:background="@drawable/edit_shape" />
+
+    <EditText
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_shape"
+        android:hint="Nombre"
+        android:id="@+id/update_et_nombre"
+        android:paddingLeft="10dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/deep_blue"
+        android:textColorHint="@color/deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <Spinner
+        android:id="@+id/update_spinner_licencia"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="10dp"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/deep_blue"
+        android:textColorHint="@color/deep_blue"
+        android:background="@drawable/edit_shape" />
+
+    <EditText
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_shape"
+        android:hint="Version"
+        android:id="@+id/update_et_version"
+        android:paddingLeft="10dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/deep_blue"
+        android:textColorHint="@color/deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <EditText
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_shape"
+        android:hint="espacio en MB"
+        android:id="@+id/update_et_espaciomb"
+        android:paddingLeft="10dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/deep_blue"
+        android:textColorHint="@color/deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+    <EditText
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:elevation="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_shape"
+        android:hint="Precio"
+        android:id="@+id/update_et_precio"
+        android:paddingLeft="10dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/deep_blue"
+        android:textColorHint="@color/deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/edit_shape"
+        android:elevation="2dp"
+        android:onClick="updateItem"
+        android:text="ACTUALIZAR"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
